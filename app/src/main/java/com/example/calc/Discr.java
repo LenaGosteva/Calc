@@ -69,8 +69,10 @@ public class Discr extends MainActivity {
         }
         else{
             Toast.makeText(this, "Поля не могут быть пустыми", Toast.LENGTH_SHORT).show();
+
             return;
         }
+
     }
     public void back(View view) {
         Intent intent = new Intent(Discr.this, MainActivity.class);

@@ -43,7 +43,7 @@ public class Linear extends MainActivity {
 //    }
     public void click (View view){
         String sa = editTextA.getText().toString();
-        String sb = editTextC.getText().toString();
+        String sb = editTextB.getText().toString();
         String sc = editTextC.getText().toString();
         if(!sa.isEmpty() && !sb.isEmpty() && !sc.isEmpty()) {
             double a = Double.parseDouble(sa);
@@ -60,7 +60,7 @@ public class Linear extends MainActivity {
             Toast.makeText(this, "Поля не могут быть пустыми", Toast.LENGTH_SHORT).show();
             return;
         }
-
+        textViewX.clearComposingText();
     }
 
     public void back(View view) {
