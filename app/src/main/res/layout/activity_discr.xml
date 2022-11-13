@@ -89,7 +89,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="30dp"
-        android:text="ОТВЕТ"
+        android:text="ОТВЕТ:"
         android:textColor="@color/black"
         android:textSize="20sp" />
     <Button
