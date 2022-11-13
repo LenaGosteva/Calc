@@ -110,17 +110,12 @@
 
     <TextView
         android:id="@+id/textV"
-        android:layout_width="244dp"
-        android:layout_height="48dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="60dp"
         android:layout_marginTop="30dp"
-        android:fontFamily="sans-serif-light"
-        android:text="ОТВЕТ"
-        android:textAlignment="viewStart"
-        android:textAllCaps="false"
-        android:textColor="#FFC107"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:text="ОТВЕT"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/backL"
