@@ -30,9 +30,7 @@ public class Calc extends AppCompatActivity {
 
         get(first, second);
 
-        Float answer = Float.parseFloat(first.getText().toString()) + Float.parseFloat(second.getText().toString());
-        String ans = Float.toString(answer);
-        info.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_START);
+        String ans = Float.toString(Float.parseFloat(first.getText().toString()) + Float.parseFloat(second.getText().toString()));
         info.setText(ans);
     }
 
@@ -49,7 +47,6 @@ public class Calc extends AppCompatActivity {
         if (secondNum != 0)
         {
             String ans = Float.toString(firstNum/secondNum);
-            info.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_START);
             info.setText(ans);
             return;
         }
@@ -64,9 +61,7 @@ public class Calc extends AppCompatActivity {
         TextView info = findViewById(R.id.textV);
 
         get(first, second);
-        float answer = Float.parseFloat(first.getText().toString()) - Float.parseFloat(second.getText().toString());
-        String ans = Float.toString(answer);
-        info.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_START);
+        String ans = Float.toString(Float.parseFloat(first.getText().toString()) - Float.parseFloat(second.getText().toString()));
         info.setText(ans);
     }
 
