@@ -21,18 +21,14 @@ public class Calc extends AppCompatActivity {
         setContentView(R.layout.activity_calc);}
     EditText first;
     EditText second;
-
+    TextView textView = findViewById(R.id.textV);
     public void plus(View view)
     {
         TextView info = findViewById(R.id.textV);
         first = findViewById(R.id.editFirst);
         second = findViewById(R.id.editSecond);
 
-        if (isStringEmpty(first.getText().toString(), second.getText().toString()))
-        {
-            Toast.makeText(getApplicationContext(),  "Одна из строк пустая\nПопробуйте заново", Toast.LENGTH_SHORT).show();
-            return;
-        }
+        get(first, second);
 
         Float answer = Float.parseFloat(first.getText().toString()) + Float.parseFloat(second.getText().toString());
         String ans = Float.toString(answer);
@@ -46,12 +42,7 @@ public class Calc extends AppCompatActivity {
         second = findViewById(R.id.editSecond);
         TextView info = findViewById(R.id.textV);
 
-        if (isStringEmpty(first.getText().toString(), second.getText().toString()))
-        {
-            Toast.makeText(getApplicationContext(),  "Одна из строк пустая\nПопробуйте заново", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
+        get(first, second);
         float firstNum = Float.parseFloat(first.getText().toString());
         float secondNum = Float.parseFloat(second.getText().toString());
 
@@ -72,12 +63,7 @@ public class Calc extends AppCompatActivity {
         second = findViewById(R.id.editSecond);
         TextView info = findViewById(R.id.textV);
 
-        if (isStringEmpty(first.getText().toString(), second.getText().toString()))
-        {
-            Toast.makeText(getApplicationContext(),  "Одна из строк пустая\nПопробуйте заново", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
+        get(first, second);
         float answer = Float.parseFloat(first.getText().toString()) - Float.parseFloat(second.getText().toString());
         String ans = Float.toString(answer);
         info.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_START);
@@ -104,16 +90,10 @@ public class Calc extends AppCompatActivity {
         first = findViewById(R.id.editFirst);
         second = findViewById(R.id.editSecond);
         TextView info = findViewById(R.id.textV);
-
-        if (isStringEmpty(first.getText().toString(), second.getText().toString()))
-        {
-            Toast.makeText(getApplicationContext(),  "Одна из строк пустая\nПопробуйте заново", Toast.LENGTH_SHORT).show();
-            return;
-        }
+        get(first, second);
         Double answer = Math.pow(Double.parseDouble(first.getText().toString()), Double.parseDouble(second.getText().toString()));
-        String ans = Double.toString(answer);
-        info.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_START);
-        info.setText(ans);
+        String ans = String.format("%.2f", answer);
+        textView.setText("ОТВЕТ: "+ ans);
     }
 
     private boolean isStringEmpty( String first, String second)
@@ -143,6 +123,15 @@ public class Calc extends AppCompatActivity {
         }
         return true;
     }
+
+    private  double get (EditText a, EditText b){
+        if (isStringEmpty(a.getText().toString(), b.getText().toString()))
+        {
+            Toast.makeText(getApplicationContext(),  "Одна из строк пустая\nПопробуйте заново", Toast.LENGTH_SHORT).show();
+            return 0.0;
+        }
+        return 0.0;
+        }
     public void back(View view) {
         Intent intent = new Intent(Calc.this, MainActivity.class);
         startActivity(intent);}
