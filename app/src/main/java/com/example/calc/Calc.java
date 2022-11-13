@@ -27,74 +27,103 @@ public class Calc<first> extends AppCompatActivity {
         info = findViewById(R.id.textV);
         textView = findViewById(R.id.textV);
 
+
     }
     boolean k = false;
 
     public void plus(View view)
-    {
-
-        double f = get(first);
-        double s = get(second);
-        String ans = Double.toString(f+s);
-        textView.setText("ОТВЕТ: "+ ans);
+    {   String sf = first.getText().toString();
+        String ss = second.getText().toString();
+        if(!sf.isEmpty() && !ss.isEmpty()) {
+            double f = Double.parseDouble(sf);
+            double s = Double.parseDouble(ss);
+            String ans = Double.toString(f + s);
+            textView.setText("ОТВЕТ: " + ans);
+        }
+        else{
+            Toast.makeText(getApplicationContext(), "Одна из строк пустая", Toast.LENGTH_SHORT).show();
+            return;
+        }
     }
 
     public void divide(View view)
     {
-        double firstNum = get(first);
-        double secondNum = get(second);
-
-        if (secondNum != 0)
-        {
-            String ans = Double.toString(firstNum/secondNum);
-            textView.setText("ОТВЕТ: "+ ans);
+        String sf = first.getText().toString();
+        String ss = second.getText().toString();
+        if(!sf.isEmpty() && !ss.isEmpty()) {
+            double f = Double.parseDouble(sf);
+            double s = Double.parseDouble(ss);
+            if (s != 0)
+            {
+                String ans = Double.toString(f/s);
+                textView.setText("ОТВЕТ: "+ ans);
+                return;
+            }
+            Toast.makeText(getApplicationContext(),  "На ноль делить нельзя",Toast.LENGTH_SHORT).show();
+        }
+        else{
+            Toast.makeText(getApplicationContext(), "Одна из строк пустая", Toast.LENGTH_SHORT).show();
             return;
         }
-        Toast.makeText(getApplicationContext(),  "На ноль делить нельзя",Toast.LENGTH_SHORT).show();
 
     }
 
     public void minus(View view)
-    {
-        double f = get(first);
-        double s = get(second);
-        String ans = Double.toString(f - s);
-        textView.setText("ОТВЕТ: "+ ans);    }
+    {String sf = first.getText().toString();
+        String ss = second.getText().toString();
+        if(!sf.isEmpty() && !ss.isEmpty()) {
+            double f = Double.parseDouble(sf);
+            double s = Double.parseDouble(ss);
+            String ans = Double.toString(f - s);
+            textView.setText("ОТВЕТ: " + ans);
+        }
+        else{
+            Toast.makeText(getApplicationContext(), "Одна из строк пустая", Toast.LENGTH_SHORT).show();
+            return;
+        }}
 
     public void multi(View view)
     {
-
-        double f = get(first);
-        double s = get(second);
-
-        String ans = Double.toString(f * s);
-        textView.setText("ОТВЕТ: "+ ans);
+        String sf = first.getText().toString();
+        String ss = second.getText().toString();
+        if(!sf.isEmpty() && !ss.isEmpty()) {
+            double f = Double.parseDouble(sf);
+            double s = Double.parseDouble(ss);
+            String ans = Double.toString(f * s);
+            textView.setText("ОТВЕТ: " + ans);
+        }
+        else{
+            Toast.makeText(getApplicationContext(), "Одна из строк пустая", Toast.LENGTH_SHORT).show();
+            return;
+        }
     }
     public void square(View view) {
-        double f = get(first);
-        double s = get(second);
-        String ans = String.format("%.2f", Math.pow(f, s));
-        textView.setText("ОТВЕТ: "+ ans);
+        String sf = first.getText().toString();
+        String ss = second.getText().toString();
+        if(!sf.isEmpty() && !ss.isEmpty()) {
+            double f = Double.parseDouble(sf);
+            double s = Double.parseDouble(ss);
+            String ans = Double.toString(Math.pow(f, s));
+            textView.setText("ОТВЕТ: " + ans);
+        }
+        else{
+            Toast.makeText(getApplicationContext(), "Одна из строк пустая", Toast.LENGTH_SHORT).show();
+            return;
+        }
     }
 
-    private boolean isStringEmpty( String first, String second)
-    {
-        return first.isEmpty() || second.isEmpty();
-    }
 
-
-    private double get (EditText a){
-        if (a.getText().toString().isEmpty())
-        {
-            if(!k) {
-                Toast.makeText(getApplicationContext(), "Одна из строк пустая", Toast.LENGTH_SHORT).show();
-                k = true;
-            }
-            return 0.0;
-        }
-        return Float.parseFloat(a.getText().toString());
-        }
-
+//
+//    private double get (EditText a){
+//        if (a.getText().toString().isEmpty())
+//        {
+//
+//            Toast.makeText(getApplicationContext(),  "Одна из строк пустая", Toast.LENGTH_SHORT).show();
+//            return 0.0;
+//        }
+//        return Float.parseFloat(a.getText().toString());
+//        }
+//
 
     public void back(View view) {
         Intent intent = new Intent(Calc.this, MainActivity.class);
