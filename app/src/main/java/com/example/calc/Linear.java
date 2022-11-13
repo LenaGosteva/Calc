@@ -15,6 +15,7 @@ public class Linear extends MainActivity {
     private EditText editTextB;
     private EditText editTextC;
     private TextView textViewX;
+    private boolean k;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +29,9 @@ public class Linear extends MainActivity {
     }
     private  double get (EditText editTextA){
         if (editTextA.getText().toString().isEmpty()){
-            Toast.makeText(this, "Поля не могут быть пустыми", Toast.LENGTH_SHORT).show();
+            if(!k) {
+                Toast.makeText(this, "Поля не могут быть пустыми /n Иначе по умолчанию подставится ноль", Toast.LENGTH_SHORT).show();
+            k = true;}
             return 0.0;
         }
         return Double.parseDouble(editTextA.getText().toString());
