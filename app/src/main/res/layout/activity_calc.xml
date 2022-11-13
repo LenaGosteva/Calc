@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_2"
+    android:orientation="vertical"
+    tools:context=".Calc">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Просто калькулятор"
+        android:textColor="@color/purple_700"
+        android:textSize="20sp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/editFirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="90dp"
+        android:ems="10"
+        android:hint="Введи первое число:"
+        android:fontFamily="sans-serif-light"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.043" />
+
+    <EditText
+        android:id="@+id/editSecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="Введи второе число:"
+        android:fontFamily="sans-serif-light"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.154"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editFirst"
+        app:layout_constraintVertical_bias="0.004" />
+
+    <Button
+        android:id="@+id/plusB"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#8432F8"
+        android:onClick="plus"
+        android:text="+"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.284" />
+
+    <Button
+        android:id="@+id/multB"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#4CAF50"
+        android:onClick="multi"
+        android:text="x"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.284" />
+
+    <Button
+        android:id="@+id/divB"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#C68422"
+        android:onClick="divide"
+        android:text="/"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.361" />
+
+    <Button
+        android:id="@+id/squareB"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/purple_200"
+        android:onClick="square"
+        android:text="^"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.794"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.284" />
+
+    <Button
+        android:id="@+id/minusB"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#2196F3"
+        android:onClick="minus"
+        android:text="-"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.362" />
+
+    <TextView
+        android:id="@+id/textV"
+        android:layout_width="244dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-light"
+        android:text="ОТВЕТ"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="#FFC107"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.167"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editSecond"
+        app:layout_constraintVertical_bias="0.351" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

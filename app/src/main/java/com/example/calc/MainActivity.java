@@ -20,7 +20,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
     }
     public void click2(View view) {
-                Intent intent1 = new Intent(MainActivity.this, Discr.class);
-                startActivity(intent1);
+                Intent intent = new Intent(MainActivity.this, Discr.class);
+                startActivity(intent);
         }
+
+    public void click3(View view) {
+        Intent intent = new Intent(MainActivity.this, Calc.class);
+        startActivity(intent);
     }
+}

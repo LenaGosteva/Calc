@@ -26,5 +26,13 @@
         android:onClick="click2"
         android:text="Перейти к решателю \n квадратных уравнений" />
 
+    <Button
+        android:id="@+id/calc"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        android:onClick="click3"
+        android:text="Перейти к простому калькулятору" />
 
 </LinearLayout>
