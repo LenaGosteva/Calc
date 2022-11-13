@@ -18,7 +18,7 @@ public class Calc extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);}
+        setContentView(R.layout.activity_calc);}
     EditText first;
     EditText second;
 
@@ -34,11 +34,6 @@ public class Calc extends AppCompatActivity {
             return;
         }
 
-        if ((isStringCorrect(first.getText().toString()) || isStringCorrect(second.getText().toString())))
-        {
-            Toast.makeText(getApplicationContext(), "В строке не число\nПопробуйте заново", Toast.LENGTH_SHORT).show();
-            return;
-        }
         Float answer = Float.parseFloat(first.getText().toString()) + Float.parseFloat(second.getText().toString());
         String ans = Float.toString(answer);
         info.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_START);

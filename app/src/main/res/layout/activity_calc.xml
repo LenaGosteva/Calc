@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -25,45 +25,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="60dp"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="30dp"
         android:ems="10"
         android:hint="Введи первое число:"
         android:fontFamily="sans-serif-light"
-        android:inputType="textPersonName"
+        android:inputType="numberDecimal|numberSigned"
         android:minHeight="48dp"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.16"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.043" />
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/editSecond"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="60dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
+        android:inputType="numberDecimal|numberSigned"
         android:hint="Введи второе число:"
         android:fontFamily="sans-serif-light"
-        android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.154"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editFirst"
-        app:layout_constraintVertical_bias="0.004" />
+        android:textSize="20sp"/>
 
     <Button
         android:id="@+id/plusB"
         android:layout_width="80dp"
         android:layout_height="50dp"
         android:layout_marginLeft="60dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         android:backgroundTint="#8432F8"
         android:onClick="plus"
         android:text="+"
@@ -73,6 +61,7 @@
         app:layout_constraintHorizontal_bias="0.084"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal"
         app:layout_constraintVertical_bias="0.284" />
 
     <Button
@@ -80,68 +69,44 @@
         android:layout_width="80dp"
         android:layout_height="50dp"
         android:layout_marginLeft="60dp"
-        android:layout_marginTop="50dp"
         android:backgroundTint="#4CAF50"
         android:onClick="multi"
         android:text="x"
+        android:orientation="horizontal"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.284" />
+ />
 
     <Button
         android:id="@+id/divB"
         android:layout_width="80dp"
         android:layout_height="50dp"
         android:layout_marginLeft="60dp"
-        android:layout_marginTop="50dp"
         android:backgroundTint="#C68422"
         android:onClick="divide"
         android:text="/"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.361" />
+        android:orientation="horizontal" />
 
     <Button
         android:id="@+id/squareB"
         android:layout_width="80dp"
         android:layout_height="50dp"
         android:layout_marginLeft="60dp"
-        android:layout_marginTop="50dp"
         android:backgroundTint="@color/purple_200"
         android:onClick="square"
         android:text="^"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.794"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.284" />
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/minusB"
         android:layout_width="80dp"
         android:layout_height="50dp"
         android:layout_marginLeft="60dp"
-        android:layout_marginTop="50dp"
         android:backgroundTint="#2196F3"
         android:onClick="minus"
         android:text="-"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.084"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.362" />
+         />
 
     <TextView
         android:id="@+id/textV"
@@ -155,13 +120,19 @@
         android:textAllCaps="false"
         android:textColor="#FFC107"
         android:textSize="20sp"
-        android:textStyle="bold"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/backL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#681818"
+        android:onClick="back"
+        android:text="НАЗАД"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.167"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editSecond"
-        app:layout_constraintVertical_bias="0.351" />
+        app:layout_constraintStart_toStartOf="parent" />
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
